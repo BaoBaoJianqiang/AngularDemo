@@ -9,3 +9,10 @@ if (environment.production) {
 }
 
 platformBrowserDynamic().bootstrapModule(AppModule);
+
+
+//静态引导
+// import { platformBrowser } from '@angular/platform-browser';
+// import { AppModuleNgFactory } from './app.module.ngfactory'
+
+// platformBrowser().bootstrapModuleFactory(AppModuleNgFactory);

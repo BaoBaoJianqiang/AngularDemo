@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  onClick() {
-    console.log('hello')
+  onClick(userName) {
+    console.log(userName)
   }
 
   constructor() { }

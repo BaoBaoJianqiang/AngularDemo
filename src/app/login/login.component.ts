@@ -4,11 +4,12 @@ import { AuthService } from '../core/auth.service'
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styles: []
+  styles: [],
+  providers: [AuthService]
 })
 export class LoginComponent implements OnInit {
 
-  service: AuthService;
+  // service: AuthService;
 
   onClick(userName, password) {
     console.log(userName+','+password)
@@ -17,8 +18,8 @@ export class LoginComponent implements OnInit {
     console.log('the result is ' + result);
   }
 
-  constructor() { 
-    this.service = new AuthService();
+  constructor(private service: AuthService) { 
+    
   }
 
   ngOnInit() {

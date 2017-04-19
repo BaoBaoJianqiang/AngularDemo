@@ -1,4 +1,5 @@
 <div>
   <input type="text" #userNameA>
-  <button (click)="onClick(userNameA.value)">Login</button>
+  <input type="password" #passwordA>
+  <button (click)="onClick(userNameA.value, passwordA.value)">Login</button>
 </div>

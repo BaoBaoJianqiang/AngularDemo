@@ -6,13 +6,13 @@ import { Component, OnInit, Inject } from '@angular/core';
   styles: []
 })
 export class LoginComponent implements OnInit {
+  username1 = ""
+  password1 = ""
 
   // service: AuthService;
 
-  onClick(userName, password) {
-    console.log(userName+','+password)
-
-    let result = this.service.loginWithCredentials(userName, password);
+  onClick() {
+    let result = this.service.loginWithCredentials(this.username1, this.password1);
     console.log('the result is ' + result);
   }
 

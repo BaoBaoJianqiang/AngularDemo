@@ -1,5 +1,5 @@
 <div>
-  <input type="text" #userNameA>
-  <input type="password" #passwordA>
-  <button (click)="onClick(userNameA.value, passwordA.value)">Login</button>
+  <input type="text" [(ngModel)]="username1">
+  <input type="password" [(ngModel)]="password1">
+  <button (click)="onClick()">Login</button>
 </div>

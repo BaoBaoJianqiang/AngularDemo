@@ -1,5 +1,11 @@
 <div>
-  <input type="text" [(ngModel)]="username1">
-  <input type="password" [(ngModel)]="password1">
+  <input type="text" [(ngModel)]="username1" 
+    required
+    #usernameRef1='ngModel'>
+    {{usernameRef1.errors | json}}
+  <input type="password" [(ngModel)]="password1" 
+    required
+    #passwordRef1='ngModel'>
+    {{passwordRef1.valid}}
   <button (click)="onClick()">Login</button>
 </div>

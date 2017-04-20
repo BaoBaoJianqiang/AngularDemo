@@ -9,12 +9,14 @@ import { AppComponent } from './app.component';
 
 import { AuthService } from './core/auth.service';
 
-import { routing } from './app.routes'
+import { routing } from './app.routes';
+import { TodoComponent } from './todo/todo.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    TodoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,11 +1,18 @@
 <div>
   <input type="text" [(ngModel)]="username1" 
     required
-    #usernameRef1='ngModel'>
-    {{usernameRef1.errors | json}}
+    minlength="3"
+    #usernameRef1="ngModel" />
+    
+  <div *ngIf="usernameRef1.errors?.required">required</div>
+  <div *ngIf="usernameRef1.errors?.minlength">至少3个字符</div>
+
   <input type="password" [(ngModel)]="password1" 
     required
-    #passwordRef1='ngModel'>
-    {{passwordRef1.valid}}
+    #passwordRef1="ngModel" />
+
+  <div *ngIf="passwordRef1.errors?.required">required</div>
+
   <button (click)="onClick()">Login</button>
 </div>
+

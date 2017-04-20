@@ -9,15 +9,11 @@ export class LoginComponent implements OnInit {
   username1 = ""
   password1 = ""
 
-  // service: AuthService;
-
-  onClick() {
-    let result = this.service.loginWithCredentials(this.username1, this.password1);
+  onSubmit(formValue) {
+    let result = this.service.loginWithCredentials(formValue.login111.username2, formValue.login111.password2);
     console.log('the result is ' + result);
-  }
 
-  onSubmit(fromValue) {
-    console.log(fromValue);
+    this.username1 = "abcd";
   }
 
   constructor(@Inject('auth') private service) { 

@@ -1,5 +1,6 @@
 <div>
 <form #formRef="ngForm" (ngSubmit)="onSubmit(formRef.value)">
+<fieldset ngModelGroup="login111">
   <input type="text" [(ngModel)]="username1" 
     name="username2"
     required
@@ -16,8 +17,8 @@
 
   <div *ngIf="passwordRef1.errors?.required">required</div>
 
-  <button (click)="onClick()">Login</button>
-  <button type="submit">Submit</button>
+  <button type="submit">Login</button>
+</fieldset>
 </form>
 </div>
 

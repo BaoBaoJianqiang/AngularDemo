@@ -16,6 +16,10 @@ export class LoginComponent implements OnInit {
     console.log('the result is ' + result);
   }
 
+  onSubmit(fromValue) {
+    console.log(fromValue);
+  }
+
   constructor(@Inject('auth') private service) { 
     
   }

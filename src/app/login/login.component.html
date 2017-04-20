@@ -1,5 +1,7 @@
 <div>
+<form #formRef="ngForm" (ngSubmit)="onSubmit(formRef.value)">
   <input type="text" [(ngModel)]="username1" 
+    name="username2"
     required
     minlength="3"
     #usernameRef1="ngModel" />
@@ -8,11 +10,14 @@
   <div *ngIf="usernameRef1.errors?.minlength">至少3个字符</div>
 
   <input type="password" [(ngModel)]="password1" 
+    name="password2"
     required
     #passwordRef1="ngModel" />
 
   <div *ngIf="passwordRef1.errors?.required">required</div>
 
   <button (click)="onClick()">Login</button>
+  <button type="submit">Submit</button>
+</form>
 </div>
 
